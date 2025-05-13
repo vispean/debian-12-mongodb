@@ -19,7 +19,7 @@ Provisioning of a debian 12 machine with a MongoDB and possibly MongoDB Compass
 
 ## Inside Airbnb
 
-- the data used for populating the airbnb database is taken from mysql: https://insideairbnb.com/get-the-data/
+- the data used for populating the airbnb database is taken from insideairbnb: https://insideairbnb.com/get-the-data/
 - visit https://insideairbnb.com/zurich/ for more information
 - many thanks to the mission driven activists of the Inside Airbnb project
 
