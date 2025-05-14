@@ -1,5 +1,5 @@
 # Debian 12 MongoDB
-Provisioning of a debian 12 machine with a MongoDB and possibly MongoDB Compass
+Provisioning of two debian 12 machines with a MongoDB community server on one and MongoDB Compass on the other
 
 ## Build virtual machine in virtualbox
 
