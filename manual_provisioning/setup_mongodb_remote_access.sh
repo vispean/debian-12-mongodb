@@ -11,7 +11,7 @@
     #  @author      Christian Locher <locher@faithpro.ch>
     #  @copyright   2025 Faithful programming
     #  @license     http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3
-    #  @version     alpha - 2025-05-02
+    #  @version     alpha - 2025-05-25
     #  @since       File available since release alpha
     #
     #########
@@ -21,6 +21,11 @@
 #
 # if the user doesn't belong to the group, add it:
 # $ sudo usermod -a -G vboxsf vagrant
+
+update_debian() {
+    sudo apt-get update
+    sudo apt-get full-upgrade -y
+}
 
 set_up_mongodb_compass() {
     # install wget
@@ -52,6 +57,11 @@ set_up_mongodb_compass() {
     cp /mnt/AirBnBZurich_Exercises.md /home/vagrant/Schreibtisch/AirBnB/AirBnBZurich_Exercises.md
     cp /mnt/AirBnBZurich_Solutions.md /home/vagrant/Schreibtisch/AirBnB/AirBnBZurich_Solutions.md
 }
+
+echo "#################"
+echo "# update debian #"
+echo "#################"
+update_debian
 
 echo "#########################"
 echo "# setup MongoDB Compass #"

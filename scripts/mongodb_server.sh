@@ -12,10 +12,15 @@
     #  @author      Christian Locher <locher@faithpro.ch>
     #  @copyright   2025 Faithful programming
     #  @license     http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3
-    #  @version     alpha - 2025-05-13
+    #  @version     alpha - 2025-05-25
     #  @since       File available since release alpha
     #
     #########
+
+function updateDebian {
+    apt-get update
+    apt-get full-upgrade -y
+}
 
 function setUpMongoDB {
     # install gpg and curl
@@ -46,6 +51,11 @@ function setUpMongoDB {
     # populate database
     mongoimport --db airbnb --collection listings --file /vagrant/auxiliary_files/mongodb/listings_zurich.json --jsonArray
 }
+
+echo "#################"
+echo "# update debian #"
+echo "#################"
+updateDebian
 
 echo "#################"
 echo "# setup MongoDB #"

@@ -18,7 +18,9 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "remote-access", primary: true do |access|
-    access.vm.box = "loch-tech/debian-12-bookworm-ch-kde"
+    config.vm.box = "loch-tech/debian-12-bookworm-ch-xfce"
+    #config.vm.box = "debian-12-bookworm-ch-xfce"
+    #access.vm.box = "loch-tech/debian-12-bookworm-ch-kde"
     #access.vm.box = "debian-12-bookworm-ch-kde"
     access.vm.network "private_network", ip: "192.168.56.11"
     

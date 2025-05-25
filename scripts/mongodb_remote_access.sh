@@ -12,10 +12,15 @@
     #  @author      Christian Locher <locher@faithpro.ch>
     #  @copyright   2025 Faithful programming
     #  @license     http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3
-    #  @version     alpha - 2025-05-13
+    #  @version     alpha - 2025-05-25
     #  @since       File available since release alpha
     #
     #########
+
+function updateDebian {
+    apt-get update
+    apt-get full-upgrade -y
+}
 
 function setUpMongoDBCompass {
     # install wget
@@ -47,6 +52,11 @@ function setUpMongoDBCompass {
     cp /vagrant/AirBnB/AirBnBZurich_Exercises.md /home/vagrant/Schreibtisch/AirBnB/AirBnBZurich_Exercises.md
     cp /vagrant/AirBnB/AirBnBZurich_Solutions.md /home/vagrant/Schreibtisch/AirBnB/AirBnBZurich_Solutions.md
 }
+
+echo "#################"
+echo "# update debian #"
+echo "#################"
+updateDebian
 
 echo "#########################"
 echo "# setup MongoDB Compass #"
