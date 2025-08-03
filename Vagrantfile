@@ -4,7 +4,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "database" do |database|
     database.vm.box = "loch-tech/debian-12-bookworm-ch"
-    #database.vm.box = "debian-12-bookworm-ch"
     database.vm.network "private_network", ip: "192.168.56.10"
 
     database.vm.provider "virtualbox" do |vb|
@@ -19,9 +18,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "remote-access", primary: true do |access|
     config.vm.box = "loch-tech/debian-12-bookworm-ch-xfce"
-    #config.vm.box = "debian-12-bookworm-ch-xfce"
     #access.vm.box = "loch-tech/debian-12-bookworm-ch-kde"
-    #access.vm.box = "debian-12-bookworm-ch-kde"
     access.vm.network "private_network", ip: "192.168.56.11"
     
 

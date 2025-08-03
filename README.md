@@ -9,10 +9,6 @@ Provisioning of two debian 12 machines with a MongoDB community server on one an
 
 - see https://github.com/vispean/debian-12-lamp section with the same title
 
-## Manual provisioning
-
-- see https://github.com/vispean/debian-12-lamp section with the same title
-
 ## Windows remarks
 
 - see https://github.com/vispean/debian-12-lamp section with the same title
