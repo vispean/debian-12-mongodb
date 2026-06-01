@@ -34,7 +34,7 @@ function setUpMongoDBCompass {
     wget https://downloads.mongodb.com/compass/mongodb-compass_1.45.4_amd64.deb
 
     # install MongoDB Compass
-    apt-get install ./mongodb-compass_1.45.4_amd64.deb
+    apt-get install -y ./mongodb-compass_1.45.4_amd64.deb
 
     # delete installation package
     rm ./mongodb-compass_1.45.4_amd64.deb
